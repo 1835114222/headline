@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>热点</title>
+    <link rel="stylesheet" href="/assets/index/css/index.css">
+
+
+</head>
+<body>
+        <div class="all">
+            <div class="popup">
+            <img src="/assets/index/img/加载.png" alt="" class="banner">
+                <span class="deles">X</span>
+                    <p>已加载好你感兴趣的头条</p>
+                <div class="jump">
+                    <p>立即打开</p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+                <div class="head">
+                    <div class="head-left">
+                        <div class="spot"></div>
+                    </div>
+                    <div class="head-in">
+                        <div class="today"></div>
+
+                        <div  class="break"></div>
+                    </div>
+                    <a href="/index.php?c=page&m=search" class="head-right"></a>
+                </div>
+                <div class="in">
+                    <?php foreach ($category as $k => $v) { ?>
+                        <a href="/index.php?c=page&m=index&cid=<?php echo $v['id'] ?>" class="option">
+                            <?php  echo $v['name']?>
+                        </a>
+                    <?php } ?>
+                    <!--<a href="" class="option">推荐</a>-->
+                    <!--<a href="" class="option">视频</a>-->
+                    <!--<a href="" class="option">热点</a>-->
+                    <!--<a href="" class="option">社会</a>-->
+                    <!--<a href="" class="option">娱乐</a>-->
+                    <!--<a href="" class="option">军事</a>-->
+                    <!--<a href="" class="option">汽车</a>-->
+                    <!--<a href="" class="option">科技</a>-->
+                    <!--<a href="" class="option">财经</a>-->
+                    <!--<a href="" class="option">游戏</a>-->
+                    <!--<a href="" class="option">探索</a>-->
+                    <div class="in-right">
+                      <a href="/index.php?c=page&m=category">＋</a>
+                    </div>
+                </div>
+        </div>
+        <div class="boxs">
+            <div class="node">
+                <span>为你推荐了8篇文章</span>
+            </div>
+            <!--<div class="artion">-->
+                <!--<div class="lable">-->
+                    <!--<h1 class="dot">习近平向柬埔寨人民党主席洪森致贺电</h1>-->
+                    <!--<div class="artion-right">-->
+                        <!--<span class="stick">置顶</span>-->
+                        <!--<span class="space">新华网</span>-->
+                        <!--<span class="cmt">评论 84</span>-->
+                        <!--<span class="time">08-15&nbsp;23:48</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="artion">-->
+                <!--<div class="lable">-->
+                    <!--<h1 class="dot">九个方面，看总书记如何用好马克思主义</h>-->
+                    <!--<div class="artion-right">-->
+                        <!--<span class="stick">置顶</span>-->
+                        <!--<span class="space">求是网</span>-->
+                        <!--<span class="cmt">评论 12</span>-->
+                        <!--<span class="time">08-15&nbsp;23:48</span>-->
+                    <!--</div>-->
+                 <!--</div>-->
+            <!--</div>-->
+            <!--<div class="artion">-->
+                <!--<div class="lable">-->
+                    <!--<h1 class="dot">上半年“万亿GDP”省份达1>个</h1>-->
+                    <!--<div class="artion-right">-->
+                        <!--<span class="stick">热</span>-->
+                        <!--<span class="space">北青网</span>-->
+                        <!--<span class="cmt">评论 3</span>-->
+                        <!--<span class="time">30分钟前</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <?php foreach ($news as $k=>$v){?>
+            <div class="artion">
+                <a href="<?php echo $v['url'] ?>">
+                    <!--<?php echo $v['title'] ?>-->
+
+                <div class="lable">
+                    <h1 class="dot">
+                        <?php echo $v['title']?>
+                    </h1>
+                    <div class="artion-right">
+                        <span class="stick">热</span>
+                        <span class="space">央视新闻</span>
+                        <span class="cmt">评论 26</span>
+                        <span class="time">30分钟前</span>
+                         <div class="imga">
+                             <img src="<?php echo $v['image']?>" alt="">
+                            <div class="play"></div>
+                        </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <?php }?>
+            <!--<div class="artion">-->
+                <!--<div class="lable">-->
+                    <!--<h1 class="dot">中国奇迹在于穷人会存钱，只是为啥现在连中国穷人都没钱了？</h1>-->
+                    <!--<div class="imgs">-->
+                        <!--<li class="clearf">-->
+                            <!--<img src="img/2.jpg" alt="">-->
+                        <!--</li>-->
+                        <!--<li class="clearf">-->
+                            <!--<img src="img/3.jpg" alt="">-->
+                        <!--</li>-->
+                        <!--<li class="clearf">-->
+                            <!--<img src="img/4.jpg" alt="">-->
+                        <!--</li>-->
+                    <!--</div>-->
+                    <!--<div class="artion-right">-->
+                        <!--<span class="space">瀚海观察</span>-->
+                        <!--<span class="cmt">评论 107</span>-->
+                        <!--<span class="time">36分钟前</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="artion">-->
+                <!--<div class="lable">-->
+                    <!--<h1 class="dot">传祺GS4——智敬新我，全新上市！</h1>-->
+                    <!--<div class="imgs">-->
+                           <!--<img src="img/8.jpg" alt="" class="larg">-->
+                    <!--<div class="artion-right">-->
+                        <!--<span class="stick-1">广告</span>-->
+                        <!--<span class="space">广汽传祺黄河店</span>-->
+                        <!--<span class="cmt">评论 1</span>-->
+                        <!--<span class="time">42分钟前</span>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="buttom">-->
+                <!--<div class="button-left">-->
+                    <!--<div class="logo">-->
+                        <!--<img src="/assets/index/img/logo.png" alt="">-->
+                        <!--<span class="pot">今日头条</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="button-right">-->
+                    <!--<span class="open">立即打开</span>-->
+                <!--</div>-->
+
+                    <!--<div class="del">-->
+                       <!--<img src="/assets/index/img/del.png" alt="" class="dels">-->
+                    <!--</div>-->
+            <!--</div>-->
+        </div>
+</body>
+<script src="/assets/index/js/index.js"></script>
+<script src="/assets/index/js/rem.js"></script>
+</html>

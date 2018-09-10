@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+	<title>添加</title>
+	<link rel="stylesheet" href="/assets/index/css/add.css">
+	<script src="/assets/index/js/rem.js"></script>
+</head>
+<body>
+<div class="head">
+	<a href="/index.php?c=page&m=index" class="backBtn">
+		<img src="/assets/public/img/back.png" alt="">
+	</a>
+	<span>频道管理</span>
+</div>
+<div class="del">
+	<span class="del-title">点击删除以下频道</span>
+	<ul class="item">
+		<?php foreach ($category_show as $k => $v) { ?>
+		<li data-id = "<?php echo $v['id'] ?>" class="li">
+			<?php echo $v['name'] ?>
+		</li>
+		<?php } ?>
+	</ul>
+</div>
+
+<div class="add">
+	<span class="add-title">点击添加以下频道</span>
+	<ul class="item">
+		<?php foreach ($category_hide as $k => $v) { ?>
+		<li data-id = "<?php echo $v['id'] ?>" class="li">
+			<?php echo $v['name'] ?>
+		</li>
+		<?php } ?>
+	</ul>
+</div>
+
+</body>
+<script src="/assets/index/js/add.js"></script>
+</html>
